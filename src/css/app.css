@@ -1,0 +1,19 @@
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;300;500;700;800;900&family=Karla:wght@200;300;400;500;600;700;800&display=swap');
+
+@import './landing.css';
+
+body {
+  font-family: 'Karla', verdana, sans-serif;
+  background-color: #F5F7FB;
+  overflow: hidden;
+}
+
+:root {
+  --text-color: #293264;
+  --dark-purple: #4D5B9E;
+  --light-purple: #D6DBF5;
+  --green: #94D7A2;
+  --red: #F8BCBC;
+}

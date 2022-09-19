@@ -1,0 +1,28 @@
+.lp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.lp-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.lp-paragraph {
+  font-weight: 300;
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+.lp-btn {
+  background-color: var(--dark-purple);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}

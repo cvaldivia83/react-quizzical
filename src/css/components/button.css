@@ -1,0 +1,24 @@
+.btn-purple {
+  background-color: var(--dark-purple);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.btn-purple:hover {
+  cursor: pointer;
+}
+
+.btn-large {
+  width: 10rem;
+  padding: 12px 36px;
+}
+
+.btn-small {
+  width: 36px;
+  padding: 8px 24px;
+}

@@ -2,13 +2,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;300;500;700;800;900&family=Karla:wght@200;300;400;500;600;700;800&display=swap');
 
-@import './landing.css';
+@import './home.css';
+@import './components/button.css';
+@import './components/container.css';
+
+/* general stylings */
 
 body {
   font-family: 'Karla', verdana, sans-serif;
   background-color: #F5F7FB;
-  overflow: hidden;
+  overflow-x: hidden;
 }
+
+/* color variables */
 
 :root {
   --text-color: #293264;

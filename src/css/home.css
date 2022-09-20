@@ -1,0 +1,61 @@
+.lp {
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.lp-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+.lp-paragraph {
+  font-weight: 300;
+  font-size: 1rem;
+  margin-top: 0;
+  color: var(--text-color);
+}
+
+.lp-blue-blob {
+  position: absolute;
+  bottom: 0%;
+  left: -2%;
+}
+
+.lp-yellow-blob {
+  position: absolute;
+  top: -3%;
+  right: 0%;
+}
+
+@media only screen and (max-width: 530px) {
+  .lp-yellow-blob {
+    width: 25%;
+  }
+  .lp-blue-blob {
+    width: 21%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .btn-large {
+    width: 6rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .btn-large {
+    width: 5.2rem;
+  }
+
+  .lp-blue-blob {
+    left: -3%;
+  }
+}

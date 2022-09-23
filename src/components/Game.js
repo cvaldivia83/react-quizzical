@@ -8,16 +8,18 @@ export default function Game(props) {
   function questionsDecoder (array) {
     return array.forEach(hash => {
       for (const element in hash) {
-        if(typeof(hash[element]) ==  'string') {
+        if(typeof(hash[element]) ===  'string') {
           hash[element] = atob(hash[element])
-        } else {
+        } else if (hash[element] === 'object') {
           hash[element] = hash[element].map(answer => atob(answer))
+        } else {
+          hash[element] = hash[element]
         }
       }
     })
   }
 
-  questionsDecoder(questions);
+  // questionsDecoder(questions);
 
   React.useEffect(() => {
     fetch("https://opentdb.com/api.php?amount=5&encode=base64&category=10")

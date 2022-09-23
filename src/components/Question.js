@@ -7,7 +7,7 @@ export default function Question(props) {
 
   return (
     <div className="question-container">
-      <h2 className="question-title">{props.title}</h2>
+      <h2 className="question-title">{atob(props.title)}</h2>
       <div className="answer-container">
         {answerElements}
       </div>

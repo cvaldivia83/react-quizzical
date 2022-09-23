@@ -1,14 +1,15 @@
-export default function Answer(props) {
+import { nanoid } from "nanoid";
 
+export default function Answer(props) {
   function selectAnswer(event) {
     const divElements = event.currentTarget.parentNode;
     event.currentTarget.classList.add("selected");
 
-    [...divElements.children].forEach(item => {
+    [...divElements.children].forEach((item) => {
       if (item !== event.currentTarget) {
         item.classList.remove("selected");
       }
-    })
+    });
   }
 
   return (

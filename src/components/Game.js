@@ -1,41 +1,28 @@
 import React from 'react';
 import Question from './Question';
+import { nanoid } from "nanoid";
 
 export default function Game(props) {
 
   const [questions, setQuestions] = React.useState([])
 
-  function questionsDecoder (array) {
-    return array.forEach(hash => {
-      for (const element in hash) {
-        if(typeof(hash[element]) ===  'string') {
-          hash[element] = atob(hash[element])
-        } else if (hash[element] === 'object') {
-          hash[element] = hash[element].map(answer => atob(answer))
-        } else {
-          hash[element] = hash[element]
-        }
-      }
-    })
-  }
-
-  // questionsDecoder(questions);
-
   React.useEffect(() => {
     fetch("https://opentdb.com/api.php?amount=5&encode=base64&category=10")
-      .then((response) => response.json())
-      .then((data) => {
-        setQuestions(data.results);
-      });
+    .then((response) => response.json())
+    .then((data) => {
+      setQuestions(data.results);
+    });
   }, [])
 
+  questions.forEach(element => {
+    element.isClicked = false;
+    element.id = nanoid();
+  })
 
   const questionsElements = questions.map((element, index) => {
     return <Question title={element.question}
-    answers={[element.correct_answer, ...element.incorrect_answers]} key={`q-${index + 1}`} />;
+    answers={[element.correct_answer, ...element.incorrect_answers]} key={nanoid()} />;
   })
-
-
 
   return (
     <div className="container">
@@ -48,7 +35,6 @@ export default function Game(props) {
       </div>
 
       {questionsElements}
-
 
     </div>
   );
